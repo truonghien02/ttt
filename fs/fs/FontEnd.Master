@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FontEnd.master.cs" Inherits="fs.FontEnd" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>FS Buy Ticket</title>
+    <link rel="stylesheet" type="text/css" href="App_Themes/Theme/Style.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>        
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">                    
+        </asp:ContentPlaceHolder>
+    </div>
+   <div id ="phandau">
+		<div class = "row">
+			<div id ="header" class = "col">
+				<div id ="logo">
+					<img src="App_Themes/Theme/images/logo.jpg" width="146" height = "136">
+				</div>
+				<div id ="slogan">
+					<p>Đồng hành cùng bạn đến với thần tượng</p>
+				</div>
+			</div><!--header-->
+			<div id = "bannner" class = "col">
+				<img src="App_Themes/Theme/images/poster.png" widt="1300" height="500">
+			</div>
+		</div>
+		<div class="call-to-action">
+			<h3>Âm nhạc kết nối chúng ta lại với nhau.</h3>
+			<p>Hãy nhanh tay đăng kí và nhận ngay tấm vé đưa bạn đến với những trải nghiệm âm nhạc tuyệt vời.</p>
+		</div>
+	</div><!--phandau-->
+
+	<div id ="phanthan">
+		<div class = "row1">
+			<div id ="user" class ="col1">
+				<form action="Link.html" method="post" name="Nhap Thong tin">
+					Họ và tên  <input type="text" name="ten"/><br /><br /><br />
+					Giới tính  <input type="radio" name="gender" value="Nam" checked/> Nam
+					           <input type="radio" name="gender" value="Nu"/> Nữ<br/><br /><br />
+					Ngày sinh  <input type="date" name ="ngaysinh" /><br/><br /><br />
+					Số CMND    <input type="text" name="cmnd"  /><br /><br /><br />
+					Địa chỉ nhà  <input type="text" name="diachi" />
+					<p>Bạn phải điền đầy đủ tất cả các thông tin trên</p>
+				</form>
+			</div>
+
+			<div id ="ticket" class="col1">
+				<form action="Link.html" method="post" name="Đặt vé">
+					Ghế <input type="radio" name="loai" value="VIP" checked/> VIP
+						<input type="radio" name="loai" value="Thuong" checked> Thường 
+					Số lượng <input type="number" name="vitri" min="1" max="100" step="1" value="1"/>
+					    <p>Tùy vào loại ghế mà vé sẽ có giá khác nhau</p>
+					FanShop <input type="radio" name="fanshop" value="Mua" checked> Mua
+							<input type="radio" name="fanshop" value="KhongMua" checked> Không Mua
+							<img src="img/qua.png" width="120" height =auto>
+							<p>Combo có giá là 250000 VND, chỉ bán combo </p>
+					Nhận vé <input type="radio" name="nhanve"  checked> Trụ sở công ty F
+							<input type="radio" name="nhanve"  checked> Địa chỉ nhà bạn<br/><br /><br />
+					Thanh toán  <input type="text" name="thanhtoan"/>
+					<p>Thanh toán bằng tài khoản ngân hàng</p>
+					<p>Sẽ xuất hiện mã giao dich sau khi thanh toán</p>
+					<p>Dùng cho trường hợp hủy và đổi vé</p>
+				</form>
+			</div>
+		</div>
+	</div><!--phanthan-->
+</form>
+</body>
+</html>
